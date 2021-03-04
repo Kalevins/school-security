@@ -1,5 +1,6 @@
 # SchoolSecurity
 Este proyecto contiene el codigo fuente y el modelo 3D para ser implementado en una Raspberry Pi.
+
 El programa permite ejecutar la captura de video en un ordenadores de placa reducida (Raspberry Pi) y procesar la imagen en un ordenador separado con mayor capacidad de computo, el cual al momento de detectar una anomalia sube el fotograma exacto en el que se detecto dicha amenaza a la cuenta de google drive del operario para hacer el respectivo analisis.
 
 ## Introducción
