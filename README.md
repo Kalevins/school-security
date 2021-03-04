@@ -1,5 +1,4 @@
 # SchoolSecurity
-Sistema de vigilancia inteligente con Raspberry Pi
 
 ## Introducción
 La inseguridad es un tópico de gran interés por parte de los ciudadanos, esto debido a que el hurto es de los delitos mas comunes a lo largo de todo el país. En base a esto nos enfocamos principalmente en la seguridad en instituciones educativas, ya que estos lugares están expuestos a este tipo de problemas, la solución que comúnmente se implementa es el instalar cámaras para compensar esta falta den seguridad. Pero hay un inconveniente, ya que la revisión del material de seguridad se hace a mano, lo cual es algo engorroso de hacer.
