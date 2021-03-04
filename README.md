@@ -1,4 +1,6 @@
 # SchoolSecurity
+Este proyecto contiene el codigo fuente y el modelo 3D para ser implementado en una Raspberry Pi.
+El programa permite ejecutar la captura de video en un ordenadores de placa reducida (Raspberry Pi) y procesar la imagen en un ordenador separado con mayor capacidad de computo, el cual al momento de detectar una anomalia sube el fotograma exacto en el que se detecto dicha amenaza a la cuenta de google drive del operario para hacer el respectivo analisis.
 
 ## Introducción
 La inseguridad es un tópico de gran interés por parte de los ciudadanos, esto debido a que el hurto es de los delitos mas comunes a lo largo de todo el país. En base a esto nos enfocamos principalmente en la seguridad en instituciones educativas, ya que estos lugares están expuestos a este tipo de problemas, la solución que comúnmente se implementa es el instalar cámaras para compensar esta falta den seguridad. Pero hay un inconveniente, ya que la revisión del material de seguridad se hace a mano, lo cual es algo engorroso de hacer.
