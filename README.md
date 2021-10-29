@@ -1,7 +1,7 @@
 # SchoolSecurity
 _El programa permite ejecutar la captura de video en un ordenadores de placa reducida y procesar la imagen en un ordenador separado con mayor capacidad de computo, el cual al momento de detectar una anomalia sube el fotograma exacto en el que se detecto dicha amenaza a la cuenta de google drive del operario para hacer el respectivo analisis._
 
-## Introducción
+## 🚀 Introducción
 La inseguridad es un tópico de gran interés por parte de los ciudadanos, esto debido a que el hurto es de los delitos mas comunes a lo largo de todo el país. En base a esto nos enfocamos principalmente en la seguridad en instituciones educativas, ya que estos lugares están expuestos a este tipo de problemas, la solución que comúnmente se implementa es el instalar cámaras para compensar esta falta den seguridad. Pero hay un inconveniente, ya que la revisión del material de seguridad se hace a mano, lo cual es algo engorroso de hacer.
 
 ### Por qué
@@ -15,7 +15,7 @@ Se pretende usar un modelo de Deep Learning para detectar personas en areas de p
 
 ## 📋 Pre-requisitos
 
-Es necesario tener dos maquinas, en este caso se usó una Raspberry Pi como cliente y un ordenador como servidor, ademas se deben completar las credenciales del archivo *credentials.json*
+Es necesario tener dos maquinas, en este caso se usó una Raspberry Pi como cliente y un ordenador como servidor, ademas se deben completar las credenciales del archivo [credentials.json](credentials.json)
 
 ## 🔧 Instalación
 
@@ -42,10 +42,6 @@ python client.py
 * **Juan Manuel Solis Prado** - *Desarrollo* - [SlowProgrammer](https://github.com/SlowProgrammer)
 
 También puedes ver la lista de todos los [contribuyentes](https://github.com/kevinmuz55/SchoolSecurity/contributors) quíenes han participado en este proyecto. 
-
-## 📄 Licencia
-
-Este proyecto está bajo la Licencia (Tu Licencia) - observa el archivo [LICENSE.md](LICENSE.md) para mas detalles
 
 ## 🎁 Expresiones de Gratitud
 
