@@ -19,3 +19,6 @@ Se pretende usar un modelo de Deep Learning para detectar personas en areas de p
 * **Luis Felpe López Pardo** - [Link del Perfil](https://github.com/lopepardo)
 * **Kevin Muñoz Rengifo** - [Link del Perfil](https://github.com/kevinmuz55)
 * **Juan Manuel Solis Prado** - [Link del Perfil](https://github.com/SlowProgrammer)
+
+# Código fuente
+Desarrollado en su totalidad en python con la ayuda de OpenCV
