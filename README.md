@@ -39,7 +39,7 @@ python client.py
 
 * **Luis Felpe López Pardo** - *Desarrollo* - [lopepardo](https://github.com/lopepardo)
 * **Kevin Muñoz Rengifo** - *Desarrollo* - [kevinmuz55](https://github.com/kevinmuz55)
-* **Juan Manuel Solis Prado** - *Desarrollo* - [SlowProgrammer](https://github.com/SlowProgrammer)
+* **Juan Manuel Solis Prado** - *Desarrollo* - [jmslasso](https://github.com/jmslasso)
 
 También puedes ver la lista de todos los [contribuyentes](https://github.com/kevinmuz55/SchoolSecurity/contributors) quíenes han participado en este proyecto. 
 
