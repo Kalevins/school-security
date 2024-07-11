@@ -47,13 +47,13 @@ CLASSES = ["background", "aeroplane", "bicycle", "bird", "boat",
 print("[INFO] Cargando Modelo...")
 net = cv2.dnn.readNetFromCaffe(args["prototxt"], args["model"])
 
-# Se inicializa el conjunto de consideraciones (etiquetas de clase que nos interesan y queremos 
+# Se inicializa el conjunto de consideraciones (etiquetas de clase que nos interesan y queremos
 # contar), ademas del diccionario de recuento de objetos y el diccionario de frames
 CONSIDER = set(["person"])
 objCount = {obj: 0 for obj in CONSIDER}
 frameDict = {}
 
-# Se inicializa el diccionario que contendrá la información sobre cuándo un dispositivo estuvo 
+# Se inicializa el diccionario que contendrá la información sobre cuándo un dispositivo estuvo
 # activo por última vez, luego se almacena la última vez que se realizó la comprobación (Ahora)
 lastActive = {}
 lastActiveCheck = datetime.now()
@@ -64,14 +64,14 @@ ESTIMATED_NUM_PIS = 4
 ACTIVE_CHECK_PERIOD = 10
 ACTIVE_CHECK_SECONDS = ESTIMATED_NUM_PIS * ACTIVE_CHECK_PERIOD
 
-# Se asigna el ancho y alto del montaje para que se puedan ver todos los frames entrantes en un 
+# Se asigna el ancho y alto del montaje para que se puedan ver todos los frames entrantes en un
 # solo "dashboard"
 mW = args["montageW"]
 mH = args["montageH"]
 print("[INFO] Detectando: {}...".format(", ".join(obj for obj in
 	CONSIDER)))
 
-# Se inicializan variables de control para el manejo de la API 
+# Se inicializan variables de control para el manejo de la API
 contador = 0
 tiempo_inicial = time.time()
 # Guarda los id, de las imagenes que se suben, para su posterior descarga
@@ -84,7 +84,7 @@ ID = []
 SCOPES = ['https://www.googleapis.com/auth/drive']
 creds = None
 
-# El archivo token.pickle almacena los tokens de acceso y actualización del usuario, y se 
+# El archivo token.pickle almacena los tokens de acceso y actualización del usuario, y se
 # crea automáticamente cuando el flujo de autorización se completa por primera vez.
 if os.path.exists('token.pickle'):
     with open('token.pickle', 'rb') as token:
@@ -128,7 +128,7 @@ def uploadFile(filename,filepath,mimetype):
 	# Se imprime
 	print('ID Archivo: %s' % imagen_id)
 
-# Función para descargar los archivos del Drive con la posicion del id en el 
+# Función para descargar los archivos del Drive con la posicion del id en el
 # arreglo "indice_id" y la ruta del archivo "filepath"
 def downloadFile(indice_id,filepath):
     file_id=ID[indice_id]
@@ -155,16 +155,16 @@ while True:
 	(rpiName, frame) = imageHub.recv_image()
 	imageHub.send_reply(b'OK')
 
-	# Si un dispositivo no está en el último diccionario activo, 
+	# Si un dispositivo no está en el último diccionario activo,
 	# significa que es un dispositivo recién conectado
 	if rpiName not in lastActive.keys():
 		print("[INFO] Reciviendo datos de {}...".format(rpiName))
 
-	# Se registra el último tiempo activo para el dispositivo del que 
+	# Se registra el último tiempo activo para el dispositivo del que
 	# acabamos de recibir un frame
 	lastActive[rpiName] = datetime.now()
 
-	# Se cambia el tamaño del frame para que tenga un ancho máximo de 400 píxeles, 
+	# Se cambia el tamaño del frame para que tenga un ancho máximo de 400 píxeles,
 	# luego se toman las dimensiones del frame y se construye un blob
 	frame = imutils.resize(frame, width=400)
 	(h, w) = frame.shape[:2]
@@ -183,7 +183,7 @@ while True:
 		# Se extrae la "confidencea" (es decir, la probabilidad) asociada con la predicción
 		confidence = detections[0, 0, i, 2]
 
-		# Se filtran las detecciones débiles asegurando que la "confidence" es mayor 
+		# Se filtran las detecciones débiles asegurando que la "confidence" es mayor
 		# que la confianza mínima
 		if confidence > args["confidence"]:
 			# Se extrae el índice de la etiqueta de clase de las detecciones
@@ -203,7 +203,7 @@ while True:
 				subprocess.call(["sudo","rm","Captura_%d.jpg" %contador])
 				contador += 1
 
-			# Se verifica si la clase predicha está en el conjunto de clases 
+			# Se verifica si la clase predicha está en el conjunto de clases
 			# que deben considerarse
 			if CLASSES[idx] in CONSIDER:
 				# Se incrementa el recuento del objeto particular detectado en el frame
@@ -241,12 +241,12 @@ while True:
 	# Se detecta si se a pulsado cualquier tecla
 	key = cv2.waitKey(1) & 0xFF
 
-	# Si la hora actual 'menos' la última vez que se realizó la verificación del dispositivo 
+	# Si la hora actual 'menos' la última vez que se realizó la verificación del dispositivo
 	# activo es mayor que el umbral establecido, se realiza una verificación
 	if (datetime.now() - lastActiveCheck).seconds > ACTIVE_CHECK_SECONDS:
 		# Ciclo para recorrer todos los dispositivos previamente activos
 		for (rpiName, ts) in list(lastActive.items()):
-			# Se elimina el RPi de los últimos diccionarios activos y de frames si el 
+			# Se elimina el RPi de los últimos diccionarios activos y de frames si el
 			# dispositivo no ha estado activo recientemente
 			if (datetime.now() - ts).seconds > ACTIVE_CHECK_SECONDS:
 				print("[INFO] Coneccion perdida con {}".format(rpiName))

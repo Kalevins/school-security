@@ -38,11 +38,9 @@ python client.py
 ## ✒️ Autores
 
 * **Luis Felpe López Pardo** - *Desarrollo* - [lopepardo](https://github.com/lopepardo)
-* **Kevin Muñoz Rengifo** - *Desarrollo* - [kevinmuz55](https://github.com/kevinmuz55)
+* **Kevin Muñoz Rengifo** - *Desarrollo* - [Kalevins](https://github.com/Kalevins)
 * **Juan Manuel Solis Prado** - *Desarrollo* - [jmslasso](https://github.com/jmslasso)
-
-También puedes ver la lista de todos los [contribuyentes](https://github.com/kevinmuz55/SchoolSecurity/contributors) quíenes han participado en este proyecto. 
 
 ## 🎁 Expresiones de Gratitud
 
-* Agradecimientos al curso de sistemas ubicuos de la Universidad del Cauca
+* Agradecimientos especiales al curso de sistemas ubicuos de la Universidad del Cauca

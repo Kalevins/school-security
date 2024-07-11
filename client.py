@@ -22,7 +22,7 @@ sender = imagezmq.ImageSender(connect_to="tcp://{}:5555".format(
 rpiName = socket.gethostname()
 vs = VideoStream(src=0).start()
 time.sleep(2.0)
- 
+
 while True:
 	# Lee el frame de la cámara y lo envía al servidor
 	frame = vs.read()
